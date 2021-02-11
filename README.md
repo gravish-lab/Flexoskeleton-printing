@@ -42,6 +42,8 @@ b. [Thermoplastic backing layer (Polycarbonate, PC)](https://www.mcmaster.com/po
 
 c. [Standard PLA filament](https://www.amazon.com/HATCHBOX-3D-Filament-Dimensional-Accuracy/dp/B00J0GMMP6/ref=sr_1_5?dchild=1&keywords=pla+filament&qid=1600810806&sr=8-5)
 
+c. [Washable glue stick](https://www.amazon.com/Elmers-Washable-All-Purpose-School-E556/dp/B0160P6XK4/ref=sr_1_6?dchild=1&keywords=glue+stick&qid=1613066825&sr=8-6)
+
 
 ### Thermal bonding 
 
