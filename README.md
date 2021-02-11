@@ -2,11 +2,7 @@
 
 <img src=https://github.com/jason12333/Flexoskeleton-Printing/blob/master/images/ezgif-6-e2f3607475d6.gif width="120%">
 
-
-<p align="center">
-
-| *Space* |
-</p>
+A quadrupedal walking robot with flexoskeleton printed limbs 
 
 # Flexoskeleton-Printing
 ## Overview of flexoskeleton printing
