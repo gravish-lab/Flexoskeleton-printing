@@ -13,10 +13,6 @@
 
 This process is based on the modification of consumer grade [fused deposition material (FDM) 3D printers](https://en.wikipedia.org/wiki/Fused_filament_fabrication) to extrude rigid FDM filaments (e.g. ABS/PLA) directly onto a flexible yet inextensible thermoplastic backing layer (PC, Polycarbonate). Upon deposition, the two materials form strong and instant bonding based on properly tuned heatbed temperature and initial Z-level of the nozzle. This method significantly improves the fatigue resistance and large-angle bendability of printed components and enables a class of insect-inspired robot morphologies, such as joint limits based on jamming and interlocking of rigid [mushrooms](https:cite). 
 
-## Components needed
-
-
-
 ## Instructions on flexoskeleton printing
 
 Flexoskeleton printing is based on direct deposition of traditional FDM filaments (e.g. ABS/PLA) onto a flexible yet inextensible backing film (e.g. PC, Polycarbonate). It combines the design concepts from lamination with 
@@ -35,6 +31,8 @@ The picture above shows the basic farbication steps of flexoskeleton printing. F
 <img src=https://github.com/jason12333/Flexoskeleton-Printing/blob/master/images/printing2.gif width="60%">
 
 </p>
+
+### Components needed
 
 Basic fabrication tools and materials needed: 
 
