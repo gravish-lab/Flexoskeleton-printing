@@ -69,6 +69,13 @@ There are two main types of "mushroom" designs:
 A. Straight mushrooms as flexion joint limits. 
 
 
+
+The jammed geometry of two mushrooms gives,
+
+$\frac{\theta r}{sin(\frac{\theta}{2})} + \theta h = b$
+
+Applying this simple equation to the straght mushroom array, the jamming curvature of the flexoskeleton structure can be predicted. In reverse, parameters of each mushroom can be designed before fabrication to match final jamming curvature to a prescribed curve, knowing only the function defining the curve. A few flexoskeleton structures that are designed to fit prescibed functions are shown below:
+
 B. Reverse mushrooms that locks up when the joints are flexed. 
 
 
@@ -85,4 +92,4 @@ This folder shows a library of different flexoskeleton designs and objects.
 ### A. Nonlinear hysteretic buckling joint
 
 ### B. Flexoskeleton fingers
-
+With a few additional features, the flexoskeleton structure can be used to make up finger on a soft gripper. As shown below, a 
