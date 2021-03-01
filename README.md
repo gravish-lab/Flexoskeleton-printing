@@ -15,10 +15,11 @@
 ## Overview of flexoskeleton printing
 
 3D printing soft and flexible components typically involves using soft fillaments. Here we demonstrate an alternate method of 3D printing soft and flexible robots which uses rigid filament but printed atop a flexible laminate, as we call **"flexoskeleton printing"**. This method enables easy and rapid printing of flexible structures. The flexoskeleton printing process has the following advantages over typical multi-material printing:
-1. Low-cost: this process can be performed on any fused-deoposition method 3D printer with a heated bed. We typically use the Prusa XX printers. 
+1. Low-cost: this process can be performed on any fused-deoposition method 3D printer with a heated bed. We typically use the Prusa MK3S printers. 
 2. Precision mechanical properties: Since the stiffness is controlled by layer thickness and geometry, flexure properties can be precisely controlled and gradients and heterogeneous stiffnesses embedded. 
 3. Precision layout of joints/links in a robot: A flexoskeleton robot can be printed as a single monolithic entity. The printed material can define links and joints which produces functional, articulated components without any manual assembly. 
-4. XX
+4. Precision curvature estimation: The curvature of the flexoskeleton when jammed can be estimated from parameters of mushroom array thanks to the simple geometry of flexoskeleton.
+5. Structural support for silicone casing: The mushrooms give structural support for silicone casing, which can increase overall stiffness of flexoskeleton, seal it from water, and provide smooth surface. 
 
 This process is based on the modification of consumer grade [fused deposition material (FDM) 3D printers](https://en.wikipedia.org/wiki/Fused_filament_fabrication) to extrude rigid FDM filaments (e.g. ABS/PLA) directly onto a flexible yet inextensible thermoplastic backing layer (PC, Polycarbonate). Upon deposition, the two materials form strong and instant bonding based on properly tuned heatbed temperature and initial Z-level of the nozzle. This method significantly improves the fatigue resistance and large-angle bendability of printed components and enables a class of insect-inspired robot morphologies, such as joint limits based on jamming and interlocking of rigid [mushrooms](https:cite). 
 
@@ -72,9 +73,20 @@ A. Straight mushrooms as flexion joint limits.
 
 The jammed geometry of two mushrooms gives,
 
-$\frac{\theta r}{sin(\frac{\theta}{2})} + \theta h = b$
-
+<p align="center">
+ 
+<img src=https://github.com/gravish-lab/Flexoskeleton-printing/blob/master/images/equation.gif width="15%">
+ 
+</p>
+ 
 Applying this simple equation to the straght mushroom array, the jamming curvature of the flexoskeleton structure can be predicted. In reverse, parameters of each mushroom can be designed before fabrication to match final jamming curvature to a prescribed curve, knowing only the function defining the curve. A few flexoskeleton structures that are designed to fit prescibed functions are shown below:
+
+
+<p align="center">
+ 
+<img src=https://github.com/gravish-lab/Flexoskeleton-printing/blob/master/images/curf_surf.png width="100%">
+ 
+</p>
 
 B. Reverse mushrooms that locks up when the joints are flexed. 
 
@@ -87,13 +99,31 @@ B. Reverse mushrooms that locks up when the joints are flexed.
 
 This folder shows a library of different flexoskeleton designs and objects. 
 
+### A. Flexibility demonstration of flexoskeleton
+When using backing layer of thickness within 0.8mm, we observe great durability and flexibility of the flexoskeleton.
+
+<p align="center">
+
+<img src=https://github.com/gravish-lab/Flexoskeleton-printing/blob/master/images/flexible_example.gif width="60%">
+
+</p>
+
+### B. Tentacle grasping achieved by slant ridges
+We observe slant "ridges" confine curving axis of flexoskeleton into a tilted angle, and the resulting curvature of flexoskeleton looks like octopus tentacle and is able to grasp thin objects:
+
+<p align="center">
+
+<img src=https://github.com/gravish-lab/Flexoskeleton-printing/blob/master/images/curling.gif width="50%"><img src=https://github.com/gravish-lab/Flexoskeleton-printing/blob/master/images/grasping.gif width="50%">
+
+</p>
+
 ## Flexoskeleton related projects
 
 ### A. Nonlinear hysteretic buckling joint
 
 ### B. Flexoskeleton fingers
 
-With a few additional features, the flexoskeleton structure can be used to make up finger on a soft gripper. As shown below, a flexoskeleton finger with no mushroom on top is encased in a silicone shell; a tendon is routed through hole on each "ridge" on the flexoskeleton structure to actuate the finger. 
+With a few additional features, the flexoskeleton structure can be used to make up finger on a soft gripper. As shown below, a flexoskeleton finger with no mushroom on top is encased in a silicone shell; a tendon is routed through hole on each ridge on the flexoskeleton structure to actuate the finger. 
 
 To design a two-finger underactuated soft gripper using this finger, Two flexoskeleton finger is mounted onto a chassis, where tendons through ridges of two flexoskeleton fingers are connected together and pass through a pulley. The pulley is connected to another tendon, which actuate two fingers. This makes up a normal (default) gripper with flexoskeleton fingers; its rendered form is presented below.
 
@@ -105,10 +135,17 @@ Atop this default design, two reconfiguring mechanisms are incorporated and show
 
 Due to the underactuation mechanism we use on the default gripper, we observe that the gripper equiping two flexoskeleton finger with significantly different thickness of PLA backing layer shows a overlapping grip, as shown below:
 
+<p align="center">
+ 
+<img src=https://github.com/gravish-lab/Flexoskeleton-printing/blob/master/images/sliding_layer.gif width="80%">
+
+</p>
+
 However, we observe an over-curved tip on the finger with thinner backing layer. This is due to the lack of mushroom that provide joint limit.
 Inspired by this newly discovered grasping mode, we design a sliding layer that can slide freely through both fingers. This sliding layer also has flexoskeleton structure, with backing layer thickness of 0.8mm and teeth on it in order to mesh with gear on a servo motor. The rendered and actual view of this gripper is shown below. The straight mushroom is also added on both fingers to prevent over-curved tip.
 
-As a result of this sliding layer mechanism, the overall stiffness of each flexoskeleton finger can be controlled by the length of sliding layer inserted. As shown above, when the sliding layer occupies 100% of space in one finger, the other finger has 0% space occupied, so the stiffness difference between two fingers reaches a maximum; if the sliding layer occupies 50% of space in one finger, the other finger also has 50% space occupied, meaning the stiffness difference goes to zero. Consequently, this reconfigurable gripper is able to achieve two grasping modes -- symmetric grasp when stiffness difference is zero and overlapping grasp when stiffness difference is at maximum. The grasping demo of these modes is shown below.
+As a result of this sliding layer mechanism, the overall stiffness of each flexoskeleton finger can be controlled by the length of sliding layer inserted. As shown above, when the sliding layer occupies 100% of space in one finger, the other finger has 0% space occupied, so the stiffness difference between two fingers reaches a maximum; if the sliding layer occupies 50% of space in one finger, the other finger also has 50% space occupied, meaning the stiffness difference goes to zero. Consequently, this reconfigurable gripper is able to achieve two grasping modes -- symmetric grasp when stiffness difference is zero and overlapping grasp when stiffness difference is at maximum.
+
 
 #### 2) Hyperextension Motion and Ridge Locking Mechanism
 
@@ -116,8 +153,10 @@ The flexoskeleton finger can also be installed onto the chassis inversely, meani
 
 However, the lifting force generated by this gripper is low compared to previous grippers, since it comes entirely from the silicone shell. To amend this, we introduce a locking mechanism, as shown below. The mushroom on each ridge of flexoskeleton finger has the change of inclined ellipse, and another flexoskeleton with same elliptical mushroom is used as the slider in the finger. Two tendons control this slider, which "locks" with finger when it is pulled up, and "unlocks" when it is pulled down. This elliptical shape of mushroom transforms transversal motion into longitudinal motion, so the slider is able to lock with finger inside the silicone shell. A grasping demo is shown below.
 
-### C. Miscellaneous Flexoskeleton Structures
+<p align="center">
+ 
+<img src=https://github.com/gravish-lab/Flexoskeleton-printing/blob/master/images/locking_demo.gif width="80%">
 
-We observe slant ridges confine curving axis of flexoskeleton into a tilted angle, and the resulting curvature of flexoskeleton looks like octopus tentacle:
+<img src=https://github.com/gravish-lab/Flexoskeleton-printing/blob/master/images/locking.gif width="120%">
 
-
+</p>
